@@ -1,0 +1,8 @@
+FrozenStringLiteralComment:
+  Enabled: false
+
+StringLiterals:
+  Enabled: false
+
+Documentation:
+  Enabled: false
