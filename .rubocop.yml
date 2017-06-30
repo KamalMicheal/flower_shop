@@ -6,3 +6,10 @@ StringLiterals:
 
 Documentation:
   Enabled: false
+
+BlockLength:
+  Max: 25
+  Exclude:
+    - 'spec/**/*'
+LineLength:
+  Max: 120
