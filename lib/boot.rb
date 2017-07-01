@@ -4,3 +4,4 @@ end
 
 require 'bundle'
 require 'flower'
+require 'catalogue'
