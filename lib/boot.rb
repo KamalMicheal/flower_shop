@@ -5,3 +5,4 @@ end
 require 'bundle'
 require 'flower'
 require 'catalogue'
+require 'bundle_picker'

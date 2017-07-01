@@ -11,5 +11,9 @@ BlockLength:
   Max: 25
   Exclude:
     - 'spec/**/*'
+
 LineLength:
   Max: 120
+
+MethodLength:
+  Max: 20
