@@ -27,7 +27,6 @@ describe Catalogue do
     before do
       allow(Flower).to receive(:new).and_return(flower)
       allow(Bundle).to receive(:new).and_return(bundle)
-      allow(Bundle).to receive(:sort)
     end
 
     let(:subject) { Catalogue.new(flowers) }
@@ -39,11 +38,6 @@ describe Catalogue do
 
     it 'creates bundles' do
       expect(Bundle).to receive(:new).twice
-      subject
-    end
-
-    it 'sorts bundles' do
-      expect(Bundle).to receive(:sort)
       subject
     end
   end

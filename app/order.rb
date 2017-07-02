@@ -1,6 +1,4 @@
 class Order
-  attr_accessor :items
-
   def initialize
     @items = []
   end
@@ -11,14 +9,18 @@ class Order
     add_item_to_cart flower, quantity, order_bundles
   end
 
+  def checkout
+    @items
+  end
+
   private
 
   def add_item_to_cart(flower, quantity, order_bundles)
-    items << {
+    @items << {
       flower: flower.code,
       quantity: quantity,
       bundles: get_bundles_with_price(flower.bundles_as_list, order_bundles),
-      total_price: get_total_price(flower.bundles_as_list, order_bundles)
+      total_price: get_total_price(flower.bundles_as_list, order_bundles).round(2)
     }
   end
 

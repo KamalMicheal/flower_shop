@@ -14,10 +14,6 @@ class Bundle
   end
 
   class << self
-    def sort(bundles)
-      bundles.sort_by(&:quantity)
-    end
-
     def bundles_list(bundles)
       list_of_bundles = {}
       bundles.each do |bundle|

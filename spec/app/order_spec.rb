@@ -52,11 +52,11 @@ describe Order do
       end
 
       it 'adds flower' do
-        expect(order.items.count).to eq 1
+        expect(order.checkout.count).to eq 1
       end
 
       it 'adds item to order items' do
-        expect(order.items.first).to eq order_item
+        expect(order.checkout.first).to eq order_item
       end
     end
   end
