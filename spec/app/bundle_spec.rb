@@ -52,4 +52,22 @@ describe Bundle do
       expect(Bundle.sort(unsorted_bundles)).to eq sorted_bundles
     end
   end
+
+  context 'bundles_list' do
+    let(:bundle1) { Bundle.new(quantity: 30, price: 1) }
+    let(:bundle2) { Bundle.new(quantity: 20, price: 15) }
+    let(:bundle3) { Bundle.new(quantity: 10, price: 110) }
+
+    let(:bundles) { [bundle1, bundle2, bundle3] }
+
+    let(:list_of_bundles) do
+      {
+        30 => 1,
+        20 => 15,
+        10 => 110
+      }
+    end
+
+    it { expect(Bundle.bundles_list(bundles)).to eq list_of_bundles }
+  end
 end

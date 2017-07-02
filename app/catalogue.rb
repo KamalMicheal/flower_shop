@@ -2,13 +2,14 @@ class Catalogue
   attr_reader :flowers
 
   def initialize(flowers)
-    @flowers = flowers.map { |flower| add_flower(flower) }
+    @flower = {}
+    flowers.each { |flower| add_flower(flower) }
   end
 
   private
 
   def add_flower(flower_json)
-    Flower.new(
+    @flower[flower_json.fetch(:code)] = Flower.new(
       name:    flower_json.fetch(:name),
       code:    flower_json.fetch(:code),
       bundles: get_bundles(flower_json.fetch(:bundles))

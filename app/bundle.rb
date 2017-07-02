@@ -17,5 +17,13 @@ class Bundle
     def sort(bundles)
       bundles.sort_by(&:quantity)
     end
+
+    def bundles_list(bundles)
+      list_of_bundles = {}
+      bundles.each do |bundle|
+        list_of_bundles[bundle.quantity] = bundle.price
+      end
+      list_of_bundles
+    end
   end
 end

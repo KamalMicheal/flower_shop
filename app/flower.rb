@@ -6,4 +6,8 @@ class Flower
     @code = code
     @bundles = bundles
   end
+
+  def bundles_as_list
+    Bundle.bundles_list(bundles)
+  end
 end
