@@ -5,7 +5,7 @@ require 'pry'
 class CommandProcessor
   class << self
     def run(args)
-      abort("Invalid Params: expect ruby flower_shop.rb flowers_file.json order_file.txt") unless args.count == 2
+      abort("Invalid Params: expect ruby run.rb flowers_file.json order_file.txt") unless args.count == 2
       flowers_json = read_flowers(args[0])
       order = read_order(args[1])
       flower_shop = FlowerShop.new(flowers_json)
